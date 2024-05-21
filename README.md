@@ -8,6 +8,7 @@ This project provides a ready-to-use solution for adding multi-language support 
 - **Automatic Redirection**: Automatically redirect to the default language if no language is specified or if an unsupported language is detected.
 - **Translation Management**: Seamlessly manage translations using `ngx-translate`.
 - **Guard Implementation**: Ensure valid language routes with a custom guard.
+- **Language Toggle**: Quickly toggle between Arabic and English with a single function.
 
 ## Scenarios Covered
 
@@ -45,7 +46,7 @@ This project provides a ready-to-use solution for adding multi-language support 
 
 ### Project Structure
 
-- **Language Service**: Provides methods to switch between languages and set the initial language.
+- **Language Service**: Provides methods to switch between languages, toggle languages, and set the initial language.
 - **Language Guard**: Ensures routes have valid language prefixes and redirects to the default language if necessary.
 - **Translation Files**: Located in `src/assets/i18n/`, these JSON files manage the translations for each language.
 
@@ -69,4 +70,5 @@ You can switch languages using the provided buttons in the header:
 <div>
   <button (click)="changeLanguage('en')">English</button>
   <button (click)="changeLanguage('ar')">Arabic</button>
+  <button (click)="toggleLanguage()">Toggle Language</button>
 </div>

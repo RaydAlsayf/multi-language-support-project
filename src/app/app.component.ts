@@ -25,4 +25,8 @@ export class AppComponent implements OnInit {
   changeLanguage(lang: string) {
     this.languageService.changeLanguage(lang);
   }
+
+  toggleLanguage() {
+    this.languageService.toggleLanguage();
+  }
 }

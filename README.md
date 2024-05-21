@@ -72,3 +72,50 @@ You can switch languages using the provided buttons in the header:
   <button (click)="changeLanguage('ar')">Arabic</button>
   <button (click)="toggleLanguage()">Toggle Language</button>
 </div>
+```
+
+# Language Service Methods
+
+The `LanguageService` provides the following methods:
+
+## changeLanguage(lang: string)
+This method changes the current language to the specified language.
+
+**Usage:**
+
+```typescript
+    changeLanguage(lang: string) {
+      this.languageService.changeLanguage(lang);
+    }
+```
+
+**Example:**
+```html
+    <button (click)="changeLanguage('en')">English</button>
+    <button (click)="changeLanguage('ar')">Arabic</button>
+```
+
+## toggleLanguage()
+This method toggles the current language between Arabic and English.
+
+**Usage:**
+
+```typescript
+    toggleLanguage() {
+      this.languageService.toggleLanguage();
+    }
+```
+
+**Example:**
+```html
+    <button (click)="toggleLanguage()">Toggle Language</button>
+```
+
+# License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+# Contributions
+Contributions are welcome! Please create an issue or submit a pull request for any features or bug fixes.
+
+# Author
+Rayd Alsayf - [Rayd Alsayf](https://www.linkedin.com/in/raydalsayf/)

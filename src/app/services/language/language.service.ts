@@ -23,6 +23,12 @@ export class LanguageService {
     }
   }
 
+    toggleLanguage() {
+    const currentLang = this.translate.currentLang || this.defaultLanguage;
+    const newLang = currentLang === 'en' ? 'ar' : 'en';
+    this.changeLanguage(newLang);
+  }
+
   setInitialLanguage() {
     const lang = this.router.url.split('/')[1];
     if (this.supportedLanguages.includes(lang)) {

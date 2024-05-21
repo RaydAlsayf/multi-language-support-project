@@ -14,8 +14,9 @@ This project provides a ready-to-use solution for adding multi-language support 
 
 1. **Valid Language Route**: Route `http://localhost:4200/en/home` navigates to `http://localhost:4200/en/home`.
 2. **Valid Language Route**: Route `http://localhost:4200/ar/home` navigates to `http://localhost:4200/ar/home`.
-3. **Missing Language**: Route `http://localhost:4200/home` navigates to `http://localhost:4200/ar/home` (default language).
-4. **Root Route**: Route `http://localhost:4200/` navigates to `http://localhost:4200/ar/home` (default language).
+3. **Valid Language Route**: Route `http://localhost:4200/en` navigates to `http://localhost:4200/en/home`.
+4. **Missing Language**: Route `http://localhost:4200/home` navigates to `http://localhost:4200/ar/home` (default language).
+5. **Root Route**: Route `http://localhost:4200/` navigates to `http://localhost:4200/ar/home` (default language).
 
 ## Table of Contents
 * [Getting Started](#getting-started)

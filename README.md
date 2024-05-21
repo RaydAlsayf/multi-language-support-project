@@ -17,6 +17,18 @@ This project provides a ready-to-use solution for adding multi-language support 
 3. **Missing Language**: Route `http://localhost:4200/home` navigates to `http://localhost:4200/ar/home` (default language).
 4. **Root Route**: Route `http://localhost:4200/` navigates to `http://localhost:4200/ar/home` (default language).
 
+## Table of Contents
+* [Getting Started](#getting-started)
+* [Prerequisites](#prerequisites)
+* [Installation](#installation)
+* [Project Structure](#project-structure)
+* [Adding New Languages](#adding-new-languages)
+* [Example Usage](#example-usage)
+* [Language Service Methods](#language-service-methods)
+* [License](#license)
+* [Contributions](#contributions)
+* [Author](#author)
+
 ## Getting Started
 
 ### Prerequisites
@@ -74,11 +86,11 @@ You can switch languages using the provided buttons in the header:
 </div>
 ```
 
-# Language Service Methods
+## Language Service Methods
 
 The `LanguageService` provides the following methods:
 
-## changeLanguage(lang: string)
+### changeLanguage(lang: string)
 This method changes the current language to the specified language.
 
 **Usage:**
@@ -95,7 +107,7 @@ This method changes the current language to the specified language.
     <button (click)="changeLanguage('ar')">Arabic</button>
 ```
 
-## toggleLanguage()
+### toggleLanguage()
 This method toggles the current language between Arabic and English.
 
 **Usage:**
@@ -111,11 +123,14 @@ This method toggles the current language between Arabic and English.
     <button (click)="toggleLanguage()">Toggle Language</button>
 ```
 
-# License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-# Contributions
+## Contributions
 Contributions are welcome! Please create an issue or submit a pull request for any features or bug fixes.
 
-# Author
+## Author
 Rayd Alsayf - [Rayd Alsayf](https://www.linkedin.com/in/raydalsayf/)
+
+
+

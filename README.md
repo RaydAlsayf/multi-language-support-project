@@ -28,8 +28,8 @@ This project provides a ready-to-use solution for adding multi-language support 
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/RaydAlsayf/multi-language-support-project.git
+    cd multi-language-support-project
     ```
 
 2. **Install dependencies**:

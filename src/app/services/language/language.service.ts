@@ -17,24 +17,24 @@ export class LanguageService {
   changeLanguage(lang: string) {
     if (this.supportedLanguages.includes(lang)) {
       this.translate.use(lang);
-      const currentUrl = this.router.url.split('/');
+      const currentUrl = window.location.pathname.split('/');
       currentUrl[1] = lang; // Change the language part of the URL
-      this.router.navigate(currentUrl);
+      this.router.navigateByUrl(currentUrl.join('/'));
     }
   }
 
-    toggleLanguage() {
+  toggleLanguage() {
     const currentLang = this.translate.currentLang || this.defaultLanguage;
     const newLang = currentLang === 'en' ? 'ar' : 'en';
     this.changeLanguage(newLang);
   }
 
   setInitialLanguage() {
-    const lang = this.router.url.split('/')[1];
+    const lang = window.location.pathname.split('/')[1];
     if (this.supportedLanguages.includes(lang)) {
       this.translate.use(lang);
     } else {
-      this.router.navigate([this.defaultLanguage, ...this.router.url.split('/').slice(2)]);
+      this.router.navigate([this.defaultLanguage, ...window.location.pathname.split('/').slice(1)]);
     }
   }
 }

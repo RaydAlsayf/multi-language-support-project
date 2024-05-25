@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LanguageResolver implements Resolve<void> {
-  constructor(private translate: TranslateService
-  ) {}
+  constructor(private translate: TranslateService) {}
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): void {
+  resolve(route: ActivatedRouteSnapshot): void {
     const lang = route.params['lang'] || 'ar';
     this.translate.use(lang);
     const html = document.querySelector('html');

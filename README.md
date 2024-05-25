@@ -17,6 +17,8 @@ This project provides a ready-to-use solution for adding multi-language support 
 3. **Valid Language Route**: Route `http://localhost:4200/en` navigates to `http://localhost:4200/en/home`.
 4. **Missing Language**: Route `http://localhost:4200/home` navigates to `http://localhost:4200/ar/home` (default language).
 5. **Root Route**: Route `http://localhost:4200/` navigates to `http://localhost:4200/ar/home` (default language).
+6. **different Page**: : Route `http://localhost:4200/en/page-two` navigates to `http://localhost:4200/en/page-two`.
+7. **different Page without language**: : Route `http://localhost:4200/page-two` navigates to `http://localhost:4200/ar/page-two`(default language).
 
 ## Table of Contents
 * [Getting Started](#getting-started)
@@ -122,6 +124,20 @@ This method toggles the current language between Arabic and English.
 **Example:**
 ```html
     <button (click)="toggleLanguage()">Toggle Language</button>
+```
+
+### NavigationService
+this service is used to navigate
+
+**Usage:**
+```typescript
+  navigate(route: string) {
+    this.navigationService.navigate([route]);
+  }
+```
+**Example:**
+```html
+<a (click)="navigate('journey-one')"></a>
 ```
 
 ## License

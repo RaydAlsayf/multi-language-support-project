@@ -23,6 +23,7 @@ export class LanguageService {
     }
   }
 
+  // this method is used to toggle between Arabic and English but can be modified to support more languages
   toggleLanguage() {
     const currentLang = this.translate.currentLang || this.defaultLanguage;
     const newLang = currentLang === 'en' ? 'ar' : 'en';

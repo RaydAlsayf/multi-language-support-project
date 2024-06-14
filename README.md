@@ -1,6 +1,7 @@
-# Angular Multi-Language Support Project
 
-This project provides a ready-to-use solution for adding multi-language support to any Angular project. It includes routing based on URL segments and integrates `ngx-translate` for internationalization (i18n). The project is configured to support English and Arabic languages, but it can be easily extended to include other languages.
+# Angular i18n and Localization Starter
+
+This project provides a ready-to-use, empty template for adding multi-language support to any Angular project. It includes routing based on URL segments and integrates `ngx-translate` for internationalization (i18n). The project is configured to support English and Arabic languages, but it can be easily extended to include other languages.
 
 ## Features
 
@@ -17,8 +18,8 @@ This project provides a ready-to-use solution for adding multi-language support 
 3. **Valid Language Route**: Route `http://localhost:4200/en` navigates to `http://localhost:4200/en/home`.
 4. **Missing Language**: Route `http://localhost:4200/home` navigates to `http://localhost:4200/ar/home` (default language).
 5. **Root Route**: Route `http://localhost:4200/` navigates to `http://localhost:4200/ar/home` (default language).
-6. **different Page**: : Route `http://localhost:4200/en/page-two` navigates to `http://localhost:4200/en/page-two`.
-7. **different Page without language**: : Route `http://localhost:4200/page-two` navigates to `http://localhost:4200/ar/page-two`(default language).
+6. **Different Page**: Route `http://localhost:4200/en/page-two` navigates to `http://localhost:4200/en/page-two`.
+7. **Different Page without Language**: Route `http://localhost:4200/page-two` navigates to `http://localhost:4200/ar/page-two` (default language).
 
 ## Table of Contents
 * [Getting Started](#getting-started)
@@ -99,15 +100,15 @@ This method changes the current language to the specified language.
 **Usage:**
 
 ```typescript
-    changeLanguage(lang: string) {
-      this.languageService.changeLanguage(lang);
-    }
+changeLanguage(lang: string) {
+  this.languageService.changeLanguage(lang);
+}
 ```
 
 **Example:**
 ```html
-    <button (click)="changeLanguage('en')">English</button>
-    <button (click)="changeLanguage('ar')">Arabic</button>
+<button (click)="changeLanguage('en')">English</button>
+<button (click)="changeLanguage('ar')">Arabic</button>
 ```
 
 ### toggleLanguage()
@@ -116,24 +117,24 @@ This method toggles the current language between Arabic and English.
 **Usage:**
 
 ```typescript
-    toggleLanguage() {
-      this.languageService.toggleLanguage();
-    }
+toggleLanguage() {
+  this.languageService.toggleLanguage();
+}
 ```
 
 **Example:**
 ```html
-    <button (click)="toggleLanguage()">Toggle Language</button>
+<button (click)="toggleLanguage()">Toggle Language</button>
 ```
 
 ### NavigationService
-this service is used to navigate
+This service is used to navigate.
 
 **Usage:**
 ```typescript
-  navigate(route: string) {
-    this.navigationService.navigate([route]);
-  }
+navigate(route: string) {
+  this.navigationService.navigate([route]);
+}
 ```
 **Example:**
 ```html
@@ -148,6 +149,3 @@ Contributions are welcome! Please create an issue or submit a pull request for a
 
 ## Author
 Rayd Alsayf - [Rayd Alsayf](https://www.linkedin.com/in/raydalsayf/)
-
-
-

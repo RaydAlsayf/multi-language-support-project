@@ -6,15 +6,21 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root',
 })
 export class LanguageResolver implements Resolve<void> {
-  constructor(private translate: TranslateService) {}
+  
+  public defaultLanguage = 'ar'; //UPDATE HERE
+  public supportedLanguagesDirection: { [key: string]: string; } = { 'en': 'ltr', 'ar': 'rtl', 'fr': 'ltr' }; //UPDATE HERE 
+
+  constructor(private translate: TranslateService) { }
 
   resolve(route: ActivatedRouteSnapshot): void {
-    const lang = route.params['lang'] || 'ar';
+    const lang = route.params['lang'] || this.defaultLanguage;
     this.translate.use(lang);
     const html = document.querySelector('html');
     if (html) {
       html.setAttribute('lang', lang);
-      html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      //set the direction of the language
+      html.setAttribute('dir', this.supportedLanguagesDirection[lang]);
+
     }
   }
 }

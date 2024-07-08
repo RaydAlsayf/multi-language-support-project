@@ -20,6 +20,10 @@ export class LanguageService {
     });
   }
 
+  getCurrentLanguage() {
+    return this.translate.currentLang || this.translate.defaultLang;
+  }
+
   changeLanguage(lang: string) {
     if (supportedLanguages.includes(lang)) {
       this.translate.use(lang);

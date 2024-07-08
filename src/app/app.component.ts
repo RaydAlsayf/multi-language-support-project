@@ -20,6 +20,10 @@ export class AppComponent implements OnInit {
     ).subscribe(() => {
       this.languageService.setInitialLanguage();
     });
+
+    this.languageService.direction$.subscribe(dir => {
+      console.log('the current language is: ', this.languageService.getCurrentLanguage().toUpperCase(), ' and the direction is: ', dir);
+    });
   }
 
   changeLanguage(lang: string) {

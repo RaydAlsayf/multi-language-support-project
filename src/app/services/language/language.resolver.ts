@@ -1,26 +1,19 @@
-import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+import { Injectable } from "@angular/core";
+import { Resolve, ActivatedRouteSnapshot } from "@angular/router";
+import { TranslateService } from "@ngx-translate/core";
+import { defaultLanguage } from "./languages.enum";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class LanguageResolver implements Resolve<void> {
-  
-  public defaultLanguage = 'ar'; //UPDATE HERE
-  public supportedLanguagesDirection: { [key: string]: string; } = { 'en': 'ltr', 'ar': 'rtl', 'fr': 'ltr' }; //UPDATE HERE 
 
-  constructor(private translate: TranslateService) { }
+  constructor(private translate: TranslateService) {}
 
   resolve(route: ActivatedRouteSnapshot): void {
-    const lang = route.params['lang'] || this.defaultLanguage;
-    this.translate.use(lang);
-    const html = document.querySelector('html');
-    if (html) {
-      html.setAttribute('lang', lang);
-      //set the direction of the language
-      html.setAttribute('dir', this.supportedLanguagesDirection[lang]);
-
+    if (typeof document != "undefined") {
+      const lang = route.params["lang"] || defaultLanguage;
+      this.translate.use(lang);
     }
   }
 }

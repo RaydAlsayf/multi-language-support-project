@@ -66,11 +66,18 @@ This project provides a ready-to-use, empty template for adding multi-language s
 - **Language Guard**: Ensures routes have valid language prefixes and redirects to the default language if necessary.
 - **Translation Files**: Located in `src/assets/i18n/`, these JSON files manage the translations for each language.
 
-### Adding New Languages
+### Adding/updating Languages
 
-1. **Add the language code to the supported languages** in `language.service.ts`:
+1. **Add the language code to the supported languages** in `src/app/services/language/languages.enum.ts`:
     ```typescript
-    private supportedLanguages = ['en', 'ar', 'newLang'];
+    export const defaultLanguage: string = "ar";
+    export const defaultLanguageDirection: string = "rtl";
+    export const supportedLanguages: string[] = ["ar", "en", "newLang"];
+    export const supportedLanguagesDirection : { [key: string]: string } = {
+        en: "ltr",
+        ar: "rtl",
+        newLang: "ltr",
+    };
     ```
 
 2. **Create a new translation file** in `src/assets/i18n/` (e.g., `newLang.json`).

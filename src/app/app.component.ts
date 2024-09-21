@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
 import { LanguageService } from './services/language/language.service';
-import { filter } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-root',
@@ -11,19 +10,14 @@ import { filter } from 'rxjs/operators';
 export class AppComponent implements OnInit {
   constructor(
     private languageService: LanguageService,
-    private router: Router
-  ) {}
+  ) { }
 
   ngOnInit() {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      this.languageService.setInitialLanguage();
-    });
-
+    // (TODO) delete these lines, it's just for testing
     this.languageService.direction$.subscribe(dir => {
       console.log('the current language is: ', this.languageService.getCurrentLanguage().toUpperCase(), ' and the direction is: ', dir);
     });
+
   }
 
   changeLanguage(lang: string) {

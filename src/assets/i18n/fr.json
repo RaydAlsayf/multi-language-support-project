@@ -1,5 +1,8 @@
 {
-    "TITLE": "Accueillir",
-    "DESCRIPTION": "Ceci est la version française."
-  }
-  
+  "TITLE": "Modèle de projet de prise en charge multilingue",
+  "DESCRIPTION": "Ceci est la version française.",
+  "Hi": "Salut",
+  "ThisIsPageTwo": "C'est la page deux",
+  "NavigateToPageTwo": "Naviguer vers la page deux",
+  "NavigateToHomePage": "Naviguer vers la page d'accueil"
+}

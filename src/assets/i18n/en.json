@@ -1,5 +1,8 @@
 {
-    "TITLE": "Welcome",
-    "DESCRIPTION": "This is the English version."
-  }
-  
+  "TITLE": "Multi Language Support Project Template",
+  "DESCRIPTION": "This is the English version.",
+  "Hi": "Hi",
+  "ThisIsPageTwo": "This is page two",
+  "NavigateToPageTwo": "Navigate to page two",
+  "NavigateToHomePage": "Navigate to home page"
+}

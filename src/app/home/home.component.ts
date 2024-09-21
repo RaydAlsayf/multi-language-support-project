@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { NavigationService } from '../services/language/navigation.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,13 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private translate: TranslateService) { }
+  constructor(private navigationService: NavigationService) { }
 
   ngOnInit(): void {
+  }
+
+  navigateToPageTwo() {
+    this.navigationService.navigate(['page-two']);
   }
 
 }
